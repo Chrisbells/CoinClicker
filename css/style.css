@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+@keyframes click{
+    to{
+        transform: scale(.99);
+    }
+}
+@keyframes coinClick{
+    to{
+        transform:scale(.95);
+    }
+}
+body{
+    font-family: '8-bit';
+}
+#clickerScreen{
+    position: relative;
+    display: block;
+    width: 39.9vw;
+    border-right:.1vw solid black;
+    height: 100vh;
+}
+#clickerScreen span{
+    color:white;
+    padding: 5px;
+    display: block;
+    text-align: center;
+    background: rgba(0,0,0,.75)
+}
+#clickerScreen canvas{
+    height: 100vh;
+    width: 39.9vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -999;
+    background: radial-gradient(#16b,#5af)
+}
+#clickerScreen #coinContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#clickerScreen #coinContainer img{
+
+width:15vw;
+}
+#clickerScreen #coinContainer img:active{
+    animation: coinClick .1s linear ;
+    transform: translate(.8);
+    width:15vw;
+    }
+#shop{
+    width:60vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../assets/img/woodbackground.jpg)
+}
+
+#shop div{
+    border-bottom: .1vh solid black;
+    height: 14.1vh
+}
+#shop div img{
+height: 100%;
+float: left;
+}
+#shop div span.name{
+    font-size: 4vmin;
+    color: #fff;
+    margin-bottom: 5%;
+}
+#shop div button.buy{
+    background: #0009;
+    color: #fff;
+    font-family:inherit;
+    text-align: center;
+    font-size: 2vmin;
+    padding:4px;
+    border-radius: 4px;
+    outline: none;
+}
+#shop div button.buy:active{
+    animation: click .1s linear alternate; 
+}
+
+#shop div span.owned{
+    color: #fff;
+    font-size: 2vmin;
+}
+#shop div span.description{
+    color: #fff;
+    font-size: 2vmin;
+}

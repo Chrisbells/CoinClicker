@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="refresh" content="">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crypto Coin Clicker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/includeFonts.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="fcons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+    <link rel="icon" type="imageicons/png" sizes="192x192" href="icons/android-icon-192x192.png">
+    <link rel="icon" type="imageicons/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="imageicons/png" sizes="96x96" href="icons/favicon-96x96.png">
+    <link rel="icon" type="imageicons/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+        <div id='clickerScreen'>
+            <canvas id='clickerBackground'></canvas>
+            <span id="coint_count">{{coins}} Coins</span>
+            <span id="cps">{{cps}} clicks per second</span>
+            <div id="coinContainer">
+                <img src="assets/img/coin.png" id="coin">
+            </div>
+        </div>
+        <div id='shop'>
+            <div id="laptop">
+                <img src="assets/img/buildings/laptop.png">
+                <span class="name">Laptop</span>
+                
+                <button class='buy'onclick="buy('laptop')">Cost:{{buildings.laptop.cost}} coins</button>
+                <br>
+                <span class='owned'>{{ownedBuildings.laptop}} owned, {{buildings.laptop.cps}} coins per second each</span>
+                <br>
+                <span class="description">{{buildings.laptop.description}}</span>
+            </div>
+            <div id="desktop">
+                <img src="assets/img/buildings/desktop.png">
+                <span class="name">Desktop</span>
+                <button class='buy' onclick="buy('desktop')">Cost:{{buildings.desktop.cost}} coins</button>
+                <br>
+                <span class='owned'>{{ownedBuildings.desktop}} owned, {{buildings.desktop.cps}} coins per second each</span>
+                <br>
+                <span class="description">{{buildings.desktop.description}}</span>
+            </div>
+            <div id='gpu'>
+                <img src="assets/img/buildings/gpu.png">
+                <span class="name">GPU</span>
+                <button class='buy' onclick="buy('gpu')">Cost:{{buildings.gpu.cost}} coins </button>
+                <br>
+                <span class='owned'>{{ownedBuildings.gpu}} owned, {{buildings.gpu.cps}} coins per second each</span>
+                <br>
+                <span class="description">{{buildings.gpu.description}}</span>
+            </div>
+            <div id="usbAsic">
+                   <img src="assets/img/buildings/usbasic.png"> 
+                   <span class="name" onclick="buy('usbAsic')">USB ASIC</span>
+                    <button class='buy'>Cost:{{buildings.asicMiner.cost}} coins</button>
+                    <br>
+                    <span class='owned'>{{ownedBuildings.asicMiner}} owned, {{buildings.asicMiner.cps}} coins per second each</span>
+                    <br>
+                    <span class="description">{{buildings.asicMiner.description}}</span>
+                
+            </div>
+            <div id="virus">
+                <img src="assets/img/buildings/virus.png">
+                    <span class="name">Virus</span>
+                    <button class='buy'onclick="buy('virus')">Cost:{{buildings.virus.cost}} coins</button>
+                    <br>
+                    <span class='owned'>{{ownedBuildings.virus}} owned, {{buildings.virus.cps}} coins per second each</span>
+                    <br>
+                    <span class="description">{{buildings.virus.description}}</span>
+                
+            </div>
+            <div id="server">
+                <img src="assets/img/buildings/server.png">
+                <span class="name">Server</span>
+                <button class='buy' onclick="buy('server')">Cost:{{buildings.server.cost}} coins</button>
+                <br>
+                <span class='owned'>{{ownedBuildings.server}} owned, {{buildings.server.cps}} coins per second each</span>
+                <br>
+                <span class="description">{{buildings.server.description}}</span>
+            </div>
+            <div id="googleserver">
+                <img src="assets/img/buildings/googleserver.png">
+                <span class="name">Google Server</span>
+                <button class='buy'onclick="buy('googleServer')">Cost:{{buildings.googleServer.cost}} coins</button>
+                <br>
+                <span class='owned'>{{ownedBuildings.googleServer}} owned, {{buildings.googleServer.cps}} coins per second each</span>
+                <br>
+                <span class="description">{{buildings.googleServer.description}}</span>
+            </div>
+        </div>
+    <script src='lib/vue.min.js'></script>
+    <script src="js/gameManager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

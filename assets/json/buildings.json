@@ -1,0 +1,44 @@
+{
+    "laptop": {
+        "cps": 0.1,
+        "cost": 10,
+        "cost_increase": 1.1,
+        "description": "Just a basic laptop to mine on"
+    },
+    "desktop": {
+        "cps": 0.5,
+        "cost": 60,
+        "cost_increase": 1.1,
+        "description": "Better specs then the laptop but still not as good as the gpu"
+    },
+    "gpu": {
+        "cps": 1,
+        "cost": 100,
+        "cost_increase": 1.1,
+        "description": "Much better than a laptop but still not as good as asics.(THE GPU DROUGHT IS YOUR FAULT)"
+    },
+    "asicMiner": {
+        "cps": 3,
+        "cost": 500,
+        "cost_increase": 1.1,
+        "description": "Application specific integrated chips are one of the most efficient ways to mine"
+    },
+    "virus": {
+        "cps": 20,
+        "cost": 1000,
+        "cost_increase": 1.1,
+        "description": "Infect some computers and have them mine for you"
+    },
+    "server": {
+        "cps": 100,
+        "cost": 10000,
+        "cost_increase": 1.1,
+        "description": "A decent server to mine on"
+    },
+    "googleServer": {
+        "cps": 1000,
+        "cost": 150000,
+        "cost_increase": 1.1,
+        "description": "Hey its a google server what else can you ask for"
+    }
+}
