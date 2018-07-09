@@ -17,7 +17,7 @@
         "cost_increase": 1.1,
         "description": "Much better than a laptop but still not as good as asics.(THE GPU DROUGHT IS YOUR FAULT)"
     },
-    "asicMiner": {
+    "usbAsic": {
         "cps": 3,
         "cost": 500,
         "cost_increase": 1.1,
