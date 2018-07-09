@@ -11,17 +11,12 @@ var ownedBuildings = {
     "googleServer": 0
 };
 loadGame()
-console.log('loaded')
-coins=parseFloat(coins);
 keys = Object.keys(ownedBuildings)
 for (var i = 0; i < keys.length; i++) {
     key = keys[i]
-    console.log(key)
-    console.log(buildings[key],ownedBuildings[key])
     buildings[key].cost = Math.floor(buildings[key].cost * Math.pow(1.1, ownedBuildings[key]))
     coinsPerSecond += buildings[key].cps * ownedBuildings[key]
 }
-function initializeVue(){
 var clickerScreen = new Vue({
     el: '#clickerScreen',
     "data": {
@@ -36,7 +31,6 @@ var storeScreen = new Vue({
         "buildings": buildings
     }
 })
-}
 var clicks = 0
 clicker = document.getElementById('coin')
 clicker.onclick = function () { addCoin(); addFallingCoin(true); clicks++ }
