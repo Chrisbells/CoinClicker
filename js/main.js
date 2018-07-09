@@ -5,7 +5,7 @@ var ownedBuildings = {
     "laptop": 0,
     "desktop": 0,
     "gpu": 0,
-    "asicMiner": 0,
+    "usbAsic": 0,
     "virus": 0,
     "server": 0,
     "googleServer": 0
