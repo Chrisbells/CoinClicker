@@ -12,7 +12,7 @@ function loadGame() {
     //if a game save exists load it (save exists doesnt do anything but store a blank value so the game knows that theres a save)
     if (localStorage.getItem('saveExists')) {
         //get coin count and display it
-        coins = localStorage.getItem('coins');
+        coins = parseFloat(localStorage.getItem('coins'));
         //get the buildings owned and display it
         ownedBuildings = JSON.parse(localStorage.getItem('ownedBuildings'));
         console.log(ownedBuildings)
