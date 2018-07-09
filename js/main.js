@@ -21,7 +21,7 @@ for (var i = 0; i < keys.length; i++) {
     buildings[key].cost = Math.floor(buildings[key].cost * Math.pow(1.1, ownedBuildings[key]))
     coinsPerSecond += buildings[key].cps * ownedBuildings[key]
 }
-
+function initializeVue(){
 var clickerScreen = new Vue({
     el: '#clickerScreen',
     "data": {
@@ -36,6 +36,7 @@ var storeScreen = new Vue({
         "buildings": buildings
     }
 })
+}
 var clicks = 0
 clicker = document.getElementById('coin')
 clicker.onclick = function () { addCoin(); addFallingCoin(true); clicks++ }
